@@ -6,7 +6,7 @@
 #export LIBSODIUM_VER=$(curl -L -s https://github.com/jedisct1/libsodium/releases/latest | grep "/jedisct1/libsodium/releases/download/" |head -n 1 |cut -f6 -d "/" | awk -F "v" '{print $1,$2}' | sed s/[[:space:]]//g )
 export LIBSODIUM_VER=$(curl -L -s https://api.github.com/repos/jedisct1/libsodium/releases/latest | grep 'tag_name' | cut -d\" -f4)
 #export LIBSODIUM_LINK="https://download.libsodium.org/libsodium/releases/libsodium-${LIBSODIUM_VER}.tar.gz"
-export LIBSODIUM_LINK="https://github.com/jedisct1/libsodium/releases/download/${LIBSODIUM_VER}/libsodium-${LIBSODIUM_VER}.tar.gz"
+export LIBSODIUM_LINK="https://github.com/jedisct1/libsodium/archive/${LIBSODIUM_VER}.tar.gz"
 
 # MBEDTLS
 #export MBEDTLS_VER=2.9.0
